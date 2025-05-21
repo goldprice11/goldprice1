@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Gold Price & Chart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #20232a;
+      color: #fff;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    header a {
+      background-color: #61dafb;
+      color: #000;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .widget {
+      margin-bottom: 30px;
+    }
+
+    .title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with affiliate link -->
+  <header>
+    <h1>Gold Live Price & Chart</h1>
+    <p>
+      <a href="https://your-affiliate-link.com" target="_blank">Trade Gold Now</a>
+    </p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Live Gold Price Ticker -->
+    <div class="widget">
+      <div class="title">Live Gold Price (XAUUSD)</div>
+      <div class="tradingview-widget-container">
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+          "symbols": [
+            {
+              "proName": "FOREXCOM:XAUUSD",
+              "title": "Gold Spot / U.S. Dollar"
+            }
+          ],
+          "colorTheme": "light",
+          "isTransparent": false,
+          "displayMode": "regular",
+          "locale": "en"
+        }
+        </script>
+      </div>
+    </div>
+
+    <!-- TradingView Live Chart -->
+    <div class="widget">
+      <div class="title">Gold Live Chart</div>
+      <div class="tradingview-widget-container">
+        <div id="tradingview_12345"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.widget({
+          "width": "100%",
+          "height": 500,
+          "symbol": "FOREXCOM:XAUUSD",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "light",
+          "style": "1",
+          "locale": "en",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_12345"
+        });
+        </script>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Your Website Name. All rights reserved. This site may contain affiliate links. Prices are for informational purposes only.</p>
+  </footer>
+
+</body>
+</html>
